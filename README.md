@@ -18,8 +18,6 @@ It allows the creation of a database in the cloud that is managed by AWS.
 
 
 
-# Source
-
 ## Why use Amazon RDS?
 
 - Amazon Relational Database Service (Amazon RDS) is a collection of managed services that makes it simple to set up, operate, and scale databases in the cloud.
