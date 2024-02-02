@@ -8,9 +8,9 @@ Are you moving to a Public or Private Cloud? If so, you are not alone. Over the 
 
 This article provides a basic overview of RDS and step-by-step guidance for creating an RDS database.
 
-So, let’s begin!
+So, let’s begin!   
 
-Foremost**, What is RDS?**
+## Foremost**, What is RDS?**
 
 RDS stands for Relational Database Service. It’s managed Database service, that uses SQL query language.
 
