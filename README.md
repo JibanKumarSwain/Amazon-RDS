@@ -4,7 +4,7 @@ Are you moving to a Public or Private Cloud? If so, you are not alone. Over the 
 
 
 
-Source
+# Source
 
 This article provides a basic overview of RDS and step-by-step guidance for creating an RDS database.
 
@@ -18,9 +18,9 @@ It allows the creation of a database in the cloud that is managed by AWS.
 
 
 
-Source
+# Source
 
-Why use Amazon RDS?
+## Why use Amazon RDS?
 
 Amazon Relational Database Service (Amazon RDS) is a collection of managed services that makes it simple to set up, operate, and scale databases in the cloud.
 
@@ -28,7 +28,7 @@ It supports six different databases including a commercial option such as SQL Se
 
 Amazon RDS handles instance failover, data backups, and software updates
 
-RDS Components
+## RDS Components
 
 1. DB Instances
 
@@ -38,7 +38,7 @@ DB instances can contain one or more user-created databases.
 
 You can have up to 40 Amazon RDS DB instances
 
-DB Instance Classes
+# DB Instance Classes
 
 Amazon RDS supports three types of instance classes
 
@@ -50,7 +50,7 @@ C. Burstable classes (includes t classes)
 
 2. DB engines
 
-A DB engine is the specific relational database software that runs on your DB instance. Amazon RDS currently supports the following engines:
+# A DB engine is the specific relational database software that runs on your DB instance. Amazon RDS currently supports the following engines:
 
 1. MariaDB
 
@@ -62,7 +62,7 @@ A DB engine is the specific relational database software that runs on your DB in
 
 5. PostgreSQL
 
-Each DB engine has its own supported features, and each version of a DB engine can include specific features.
+# Each DB engine has its own supported features, and each version of a DB engine can include specific features.
 
 3. Amazon RDS storage
 
