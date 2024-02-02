@@ -22,15 +22,15 @@ It allows the creation of a database in the cloud that is managed by AWS.
 
 ## Why use Amazon RDS?
 
-Amazon Relational Database Service (Amazon RDS) is a collection of managed services that makes it simple to set up, operate, and scale databases in the cloud.
+- Amazon Relational Database Service (Amazon RDS) is a collection of managed services that makes it simple to set up, operate, and scale databases in the cloud.
 
-It supports six different databases including a commercial option such as SQL Server and Oracle, with RDS your database operations are managed by AWS, leaving your team free to focus on innovation.
+- It supports six different databases including a commercial option such as SQL Server and Oracle, with RDS your database operations are managed by AWS, leaving your team free to focus on innovation.
 
-Amazon RDS handles instance failover, data backups, and software updates
+- Amazon RDS handles instance failover, data backups, and software updates
 
 ## RDS Components
 
-1. DB Instances
+## 1. DB Instances
 
 A DB instance is an isolated database environment in the Amazon Web Services Cloud. The basic building block of Amazon RDS is the DB instance.
 
@@ -38,7 +38,7 @@ DB instances can contain one or more user-created databases.
 
 You can have up to 40 Amazon RDS DB instances
 
-# DB Instance Classes
+## DB Instance Classes
 
 Amazon RDS supports three types of instance classes
 
@@ -48,7 +48,7 @@ B. Memory optimized classes (includes r and x classes)
 
 C. Burstable classes (includes t classes)
 
-2. DB engines
+## 2. DB engines
 
 # A DB engine is the specific relational database software that runs on your DB instance. Amazon RDS currently supports the following engines:
 
@@ -64,19 +64,21 @@ C. Burstable classes (includes t classes)
 
 # Each DB engine has its own supported features, and each version of a DB engine can include specific features.
 
-3. Amazon RDS storage
+## 3. Amazon RDS storage
 
 Amazon RDS uses Elastic Block Storage (EBS) volume for DB and logs storage
 
 There are three types of storage in Amazon RDS
 
-General Purpose SSD (also known as gp2 and gp3)
-General Purpose SSD storage offers cost-effective storage that is acceptable for most database workloads that aren’t latency sensitive.
+## 1. General Purpose SSD (also known as gp2 and gp3)
+  
+- General Purpose SSD storage offers cost-effective storage that is acceptable for most database workloads that aren’t latency sensitive.
 
-2. Provisioned IOPS SSD (also known as io1)
+## 2. Provisioned IOPS SSD (also known as io1)
 
 Provisioned IOPS storage is a storage type that delivers predictable performance and consistently low latency.
-3. Magnetic (also known as standard)
+
+## 3. Magnetic (also known as standard)
 
 Amazon RDS also supports magnetic storage for backward compatibility.
 
@@ -90,7 +92,7 @@ Doesn’t support elastic volumes.
 
 Limited to a maximum size of 3 TiB
 
-4. AWS RDS Security
+## 4. AWS RDS Security
 
 At -rest Encryption( for data stored in the databases and is not moving through networks)
 1. Database master & replicas encryption using AWS KMS must be defined at launch time.
@@ -108,7 +110,7 @@ IAM roles to connect to your DB
 Security Groups
 Control Network Access to your RDS DB
 
-5. RDS Storage Auto Scaling
+## 5. RDS Storage Auto Scaling
 
 Helps you to Increase storage on your RDS DB instance dynamically.
 
@@ -128,62 +130,72 @@ You cannot SSH into your instance.
 
 Because its manages service, we do not have access to underlying ec2 instance
 
-Use cases Of RDS
+## Use cases Of RDS
 
-Web and mobile applications
+- Web and mobile applications
 
-Enterprise applications
+- Enterprise applications
 
-Online games
+- Online games
 
-Various versions of Amazon RDS and Amazon Aurora are used by start-ups for powerful and scalable applications on AWS.
+- Various versions of Amazon RDS and Amazon Aurora are used by start-ups for powerful and scalable 
+  applications on AWS.
 
-Read replicas
+## Read replicas
 
-Read replicas, as the name suggests, help scale reads. Can create up to 5 read replicas within the same AZ, across AZs, or across regions.
+- Read replicas, as the name suggests, help scale reads. Can create up to 5 read replicas within the same  
+  AZ, across AZs, or across regions.
 
-Amazon RDS uses the asynchronous replication method for the DB engine to update the read replica whenever there is a change to the primary DB instance.
+- Amazon RDS uses the asynchronous replication method for the DB engine to update the read replica 
+  whenever there is a change to the primary DB instance.
 
 Read replicas are used for only reads (SELECT) Not INSERT, UPDATE, DELETE
 
 
 
-Source
+## Source
 
-Network Cost
+## Network Cost
 
-In AWS there is a network cost when data goes from one AZ to another
+- In AWS there is a network cost when data goes from one AZ to another
 
-For RDS read replicas with the same region, you don’t pay that fee
+- For RDS read replicas with the same region, you don’t pay that fee
 
-Amazon RDS Multi-AZ
+## Amazon RDS Multi-AZ
 
-Amazon RDS automatically creates a primary database (DB) instance
+- Amazon RDS automatically creates a primary database (DB) instance
 
-Replicate every single change in Master DB, whenever an application write anything in master DB that change also needs to also be in standby DB
+- Replicate every single change in Master DB, whenever an application write anything in master DB that 
+  change also needs to also be in standby DB
 
-We get only DNS name in case there is any issue in the master there will be automatically fail-over to standby DB
+- We get only DNS name in case there is any issue in the master there will be automatically fail-over to 
+  standby DB
 
 
 
-Source
+## Source
 
 **Now let's see how to create an RDS Instance
 **Follow the below step for creating your own AWS RDS Instance
 
-To get started, navigate to the Amazon RDS Console. On the main page, Select the region in which you want to create a DB.
+- To get started, navigate to the Amazon RDS Console. On the main page, Select the region in which you 
+  want to create a DB.
 
-Click on the Create database to create a new database. This initiates the database creation wizard.
-
-
-
-It will redirect to the Database creation page here choose a database creation method and select Standard to create.
-
-In the engine option page here choose MYSQL as the Engine type. Then choose the version of MYSQL you want to use. Select the engine version.
+- Click on the Create database to create a new database. This initiates the database creation wizard.
 
 
 
-The database creation wizard includes templates to make it easier to configure the settings for your Amazon RDS database.
+- It will redirect to the Database creation page here choose a database creation method and select 
+  Standard to create.
+
+- In the engine option page here choose MYSQL as the Engine type. Then choose the version of MYSQL you 
+  want to use. Select the engine version.
+
+
+
+- The database creation wizard includes templates to make it easier to configure the settings for your 
+  Amazon RDS database.
+  
 1. If you are creating this database to use in production, you should choose the production template. Here you have full control over every option.
 
 2. If you wanted to have a free tier setup, you would select the Free tier option, this would pre-select some options for the free tiers.
@@ -194,10 +206,11 @@ Here, we’ll modify every option, Hence I’m going to use production as a temp
 
 
 
-In the Settings section, give your database a name, and set the master user name and password. Make sure to write it down because you need them to connect to your database and create additional users.
+- In the Settings section, give your database a name, and set the master user name and password. Make sure 
+  to write it down because you need them to connect to your database and create additional users.
 
 
-Next, choose the database instance size.
+- Next, choose the database instance size.
 This is the size of the underlying EC2 instance.
 
 We have three classes
@@ -236,6 +249,7 @@ because we want to remain within the free tier, going to use Do not create a sta
 
 
 Now for connectivity, we have two options
+
 1. Don’t Connect to an EC2 Compute Resources
 
 2. Connect to EC2 Compute Resources,
@@ -248,32 +262,38 @@ If you want to have public access, here I want to access this database from my o
 
 
 
-Next, we need to choose or create a security group. So I’m going to create a new security group. And the name is going to be DB_SG, and the port to connect to the database on MySQL is 3306.
+- Next, we need to choose or create a security group. So I’m going to create a new security group. And the 
+  name is going to be DB_SG, and the port to connect to the database on MySQL is 3306.
 
 
-In terms of database authentication,
+## In terms of database authentication,
 
-Use username and password, but we can also enable IAM database authentication to have IAM users and roles directly access RDS.
+- Use username and password, but we can also enable IAM database authentication to have IAM users and 
+  roles directly access RDS.
 
-Password and Kerberos authentication. we can enable Kerberos.
+- Password and Kerberos authentication. we can enable Kerberos.
 
 We can enable monitoring and enhance monitoring giving you a 60-second granularity.
 
 
 
-There are some additional configuration options you can configure, including settings for backups, monitoring, maintenance, and automated upgrades. The default settings work for most situations, but you should review them as per your needs.
+- There are some additional configuration options you can configure, including settings for backups, 
+  monitoring, maintenance, and automated upgrades. The default settings work for most situations, but you 
+  should review them as per your needs.
 
 
-The end of the database creation wizard shows you the estimated monthly costs for your database instance. Click on Create database to create your database instance.
+- The end of the database creation wizard shows you the estimated monthly costs for your database 
+  instance. Click on Create database to create your database instance.
 
 
-When your database is ready to use, its Status is Available. Endpoint is required for connecting to RDS DB
+- When your database is ready to use, its Status is Available. Endpoint is required for connecting to RDS 
+  DB
 
 
-From the Monitoring tab, we can monitor the CPU utilization, Storage etc.
+- From the Monitoring tab, we can monitor the CPU utilization, Storage etc.
 
 
-Connect to RDS DB
+## Connect to RDS DB
 
 For connecting to AWS RDS DB we can use any SQL client software application and a database administration tool.
 
@@ -281,32 +301,34 @@ We are using DBeaver SQL client for connecting to our Database
 
 For connecting to your DB follow the below steps.
 
-Open your DBeaver From the Left side of the corner select new connections.
+- Open your DBeaver From the Left side of the corner select new connections.
 
 
-On the next window select MySQL as the database, Click on next
+- On the next window select MySQL as the database, Click on next
 
 
-It will redirect you to the Connection settings
-Here on Server Host paste your RDS endpoint. And put username and password.
+- It will redirect you to the Connection settings
 
-Finally, click on the test connection then Pop up will come as connected.
-That means you are successfully connected to your RDS database
+# Here on Server Host paste your RDS endpoint. And put username and password.
 
-
-
-You can create databases, Schema tables as per your need.
+- Finally, click on the test connection then Pop up will come as connected.
+  That means you are successfully connected to your RDS database
 
 
-Deleting the RDS Instance
 
-Click on the modify Instance, and Uncheck the deletion protection. And click on continue.
-
-
-On the next window click on apply Immediately. And click modify DB Instance
+- You can create databases, Schema tables as per your need.
 
 
-On the Database, main page select database and click on Action>>Delete>> On the next window type delete me
+## Deleting the RDS Instance
 
-It will successfully delete your DB Instance
+- Click on the modify Instance, and Uncheck the deletion protection. And click on continue.
+
+
+- On the next window click on apply Immediately. And click modify DB Instance
+
+
+- On the Database, main page select database and click on Action>>Delete>> On the next window type delete 
+  me
+
+- It will successfully delete your DB Instance
 
