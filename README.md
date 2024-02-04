@@ -2,7 +2,7 @@
 
 Are you moving to a Public or Private Cloud? If so, you are not alone. Over the past decade, there has been an increase in investment in cloud computing by small to medium businesses. Globally many organizations have already shifted to cloud platforms to take advantage of the latest technology.
 
-
+                 
 
 # Source
 
